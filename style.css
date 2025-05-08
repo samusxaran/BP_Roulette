@@ -107,7 +107,7 @@ body { display: flex; flex-direction: column; justify-content: flex-start; align
 .word-list-hint { font-size: 0.9em; color: #666; margin-top: 5px; text-align: center; max-width: 400px; margin-left: auto; margin-right: auto; }
 
 /* Image Upload Styles (Caps) */
-.upload-button, .remove-button { display: inline-block; padding: 10px 20px; border: none; border-radius: 6px; cursor: pointer; font-size: 16px; font-weight: bold; transition: background-color 0.2s ease, box-shadow 0.2s ease; margin: 5px; }
+.upload-button, .remove-button { display: inline-block; padding: 10px 20px; border: none; border-radius: 6px; cursor: pointer; font-size: 16px; font-weight: bold; transition: background-color 0.2s ease, box-shadow 0.2s ease; margin: 5px 0; /* Adjusted margin for block context */ box-sizing: border-box; width: 100%;}
 .upload-button { background-color: #5dade2; color: white; }
 .upload-button:hover { background-color: #3498db; box-shadow: 0 2px 5px rgba(0,0,0,0.2); }
 .remove-button { background-color: #e74c3c; color: white; }
@@ -119,6 +119,35 @@ body { display: flex; flex-direction: column; justify-content: flex-start; align
 .font-size-control label { font-weight: bold; color: #555; }
 .font-size-control input[type="range"] { flex-grow: 1; max-width: 200px; cursor: pointer; }
 .font-size-control span { font-weight: bold; color: #333; min-width: 45px; text-align: right; }
+
+/* --- Config Management Area --- */
+.config-management-area {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    max-width: 400px;
+    margin-left: auto;
+    margin-right: auto;
+}
+.config-management-area input[type="text"],
+.config-management-area select {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    font-size: 16px;
+    box-sizing: border-box;
+}
+.config-management-area .button-group {
+    display: flex;
+    gap: 10px;
+}
+.config-management-area .button-group .upload-button,
+.config-management-area .button-group .remove-button {
+    flex-grow: 1;
+    margin: 0; /* Override default margin from .upload-button */
+}
+
 
 /* --- Responsive Adjustments --- */
 @media (max-width: 650px) { .spinner-container { width: 90vw; height: auto; } .spinner-wheel { width: 100%; height: 150px; transform: rotateX(-20deg); } .spin-button-top { font-size: 20px; padding: 10px 30px; min-width: 150px;} .page-title { font-size: 2.2em;} .result-display { font-size: 28px; } .config-section { max-width: 90%; padding: 20px; margin-top: 10px;} }

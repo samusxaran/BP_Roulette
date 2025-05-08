@@ -1,0 +1,11 @@
+    audio/spin_start.mp3: Plays when the spin button is clicked.
+
+    audio/winner_reveal.mp3: Plays when the spinner stops and shows the result.
+
+    audio/item_add.mp3: Plays when a new item is added to the spinner.
+
+    audio/item_remove.mp3: Plays when an item (or its image) is removed.
+
+    audio/config_save.mp3: Plays when a configuration is saved.
+
+    audio/config_load.mp3: Plays when a configuration is loaded.

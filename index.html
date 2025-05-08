@@ -37,7 +37,7 @@
                  <h4>Current Items:</h4>
                  <ul id="word-list" class="word-list item-list">
                  </ul>
-                 <p class="word-list-hint">(Click 'X' to remove item, click image 'X' to remove image)</p>
+                 <p class="word-list-hint">(Click 'X' to remove item, click image '🖼️✖' to remove image)</p>
             </div>
              <div class="config-block">
                 <h3>Customize Caps</h3>
@@ -52,6 +52,21 @@
                     <label for="font-size-slider">Size:</label>
                     <input type="range" id="font-size-slider" min="8" max="30" value="18">
                     <span id="font-size-value">18px</span>
+                </div>
+             </div>
+             <div class="config-block">
+                <h3>Manage Configurations</h3>
+                <div class="config-management-area">
+                    <h4>Save Current Setup</h4>
+                    <input type="text" id="config-name-input" placeholder="Enter Configuration Name">
+                    <button id="save-config-button" class="upload-button">Save Current Configuration</button>
+            
+                    <h4 style="margin-top: 20px;">Load or Delete Setup</h4>
+                    <select id="config-select" aria-label="Select a configuration to load or delete"></select>
+                    <div class="button-group" style="margin-top: 10px;">
+                        <button id="load-config-button" class="upload-button">Load Selected</button>
+                        <button id="delete-config-button" class="remove-button">Delete Selected</button>
+                    </div>
                 </div>
              </div>
 
