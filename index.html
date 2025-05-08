@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Brain Power - 3D Classroom Spinner</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@600;700&family=Balsamiq+Sans:wght@700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <h1 class="page-title">
+        <span class="brain">🧠</span> Brain Power Activity Spinner! <span class="power">⚡</span>
+    </h1>
+
+    <div class="main-container">
+        <div class="spinner-section">
+            <button id="spin-button" class="spin-button-top">SPIN!</button>
+            <div class="spinner-container" id="spinner-container">
+                <div class="spinner-wheel" id="spinner-wheel">
+                </div>
+            </div>
+            <div id="result-display" class="result-display" aria-live="polite">
+            </div>
+        </div>
+
+        <div class="config-section">
+            <h2>Customize Spinner</h2>
+            <div class="config-block">
+                 <h3>Add Spinner Item</h3>
+                 <div class="add-word-form">
+                     <input type="text" id="word-input" placeholder="Enter word or phrase" required>
+                     <input type="file" id="segment-image-input" accept="image/*" style="display: none;">
+                     <label for="segment-image-input" class="upload-button small-upload-btn" title="Add image to this item (optional)">🖼️</label>
+                     <button id="add-word-button">Add</button>
+                 </div>
+                 <div id="segment-image-preview" class="image-preview-area"></div>
+                 <h4>Current Items:</h4>
+                 <ul id="word-list" class="word-list item-list">
+                 </ul>
+                 <p class="word-list-hint">(Click 'X' to remove item, click image 'X' to remove image)</p>
+            </div>
+             <div class="config-block">
+                <h3>Customize Caps</h3>
+                <input type="file" id="cap-image-upload" accept="image/*" style="display: none;">
+                <label for="cap-image-upload" class="upload-button">Upload Cap Image</label>
+                <button id="remove-cap-image" class="remove-button" style="display: none;">Remove Image</button>
+                <p class="upload-hint">Applies to top and bottom surfaces.</p>
+             </div>
+             <div class="config-block">
+                <h3>Adjust Text Size</h3>
+                <div class="font-size-control">
+                    <label for="font-size-slider">Size:</label>
+                    <input type="range" id="font-size-slider" min="8" max="30" value="18">
+                    <span id="font-size-value">18px</span>
+                </div>
+             </div>
+
+        </div> <!-- End config-section -->
+    </div> <!-- End main-container -->
+
+    <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
