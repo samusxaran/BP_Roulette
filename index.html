@@ -55,18 +55,29 @@
                 </div>
              </div>
              <div class="config-block">
-                <h3>Manage Configurations</h3>
+                <h3>Manage Configurations (Browser Storage)</h3>
                 <div class="config-management-area">
                     <h4>Save Current Setup</h4>
                     <input type="text" id="config-name-input" placeholder="Enter Configuration Name">
-                    <button id="save-config-button" class="upload-button">Save Current Configuration</button>
-            
-                    <h4 style="margin-top: 20px;">Load or Delete Setup</h4>
-                    <select id="config-select" aria-label="Select a configuration to load or delete"></select>
+                    <button id="save-config-button" class="upload-button">Save to Browser</button>
+
+                    <h4 style="margin-top: 20px;">Load or Delete (from Browser)</h4>
+                    <select id="config-select" aria-label="Select a configuration to load or delete from browser storage"></select>
                     <div class="button-group" style="margin-top: 10px;">
                         <button id="load-config-button" class="upload-button">Load Selected</button>
                         <button id="delete-config-button" class="remove-button">Delete Selected</button>
                     </div>
+                </div>
+             </div>
+             <div class="config-block">
+                <h3>Manage Configurations (File)</h3>
+                <div class="config-management-area">
+                    <button id="download-config-file-button" class="upload-button">Download Current Config to File</button>
+
+                    <h4 style="margin-top: 20px;">Load Config from File</h4>
+                    <input type="file" id="upload-config-file-input" accept=".json,.bpsc" style="display: none;">
+                    <!-- .bpsc is a custom extension example: Brain Power Spinner Config -->
+                    <label for="upload-config-file-input" class="upload-button">Upload Configuration File</label>
                 </div>
              </div>
 
